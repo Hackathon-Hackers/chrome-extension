@@ -1,22 +1,32 @@
 {
   "manifest_version": 2,
+  "version": "0.1",
 
   "name": "HH Facebook Filter",
+  "short_name": "HH FB",
   "description": "This extension allows you to find what you really want/need out of the HH group by filtering the tags that you're interested in.",
   "version": "0.1",
-  "content_scripts": [
-    {
-      "matches": ["https://*.facebook.com/*"],
-      "js": ["/js/fb.js"]
-    }
-  ],
   "browser_action": {
     "default_popup": "popup.html"
   },
-  "web_accessible_resources": [
-      "manifest.json"
-  ],
-  "permissions": [
-    "https://*.facebook.com/*"
-  ]
+  "homepage_url": "https://www.facebook.com/groups/hackathonhackers/",
+
+  "background": {
+    "scripts": ["/js/bgscript.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "include_globs": ["*://*.facebook.com/*"],
+    "matches": ["*://*.facebook.com/*"],
+    "css": ["/css/styles.css"],
+    "js": ["/js/fb.js"]
+  }],
+  "options_page": "/options/options.html",
+  "page_action": {
+    "default_icon": { "19": "/img/icon19.png", "38": "/img/icon38.png" },
+    "default_title": "HH Options"
+  },
+  "icons": { "16": "/img/icon16.png", "48": "/img/icon48.png", "128": "/img/icon128.png" },
+  "web_accessible_resources": ["manifest.json"],
+  "permissions": ["storage", "tabs", "*://*.facebook.com/*"]
 }
