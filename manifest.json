@@ -4,11 +4,19 @@
   "name": "HH Facebook Filter",
   "description": "This extension allows you to find what you really want/need out of the HH group by filtering the tags that you're interested in.",
   "version": "0.1",
-
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "js": ["/js/fb.js"]
+    }
+  ],
   "browser_action": {
     "default_popup": "popup.html"
   },
+  "web_accessible_resources": [
+      "manifest.json"
+  ],
   "permissions": [
-    // "https://secure.flickr.com/"
+    "https://*.facebook.com/*"
   ]
 }
