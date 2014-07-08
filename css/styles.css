@@ -1,0 +1,27 @@
+/* Full width content column */
+body._5vb_ #globalContainer {
+  width: calc(100% - 250px) !important;
+}
+
+html ._5vb_._5vb_.hasLeftCol .hasRightCol div#contentArea {
+  width: calc(100% - 300px) !important;
+}
+
+/* Nav bar */
+._5vb_ #blueBarHolder #blueBar #pageHead {
+  width: 100% !important;
+}
+
+._59g8 {
+  padding: 0 0 0 32px;
+}
+
+/* Centered post photos */
+._5v3q ._4-eo, .fbStoryAttachmentImage, ._2a2q {
+  margin: auto;
+}
+
+._5cq3, ._5vb_ ._dcs .__c_, ._5vb_ ._6l- {
+  background-color: #eee !important;
+  border-radius: 3px;
+}
