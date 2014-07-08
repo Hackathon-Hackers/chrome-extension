@@ -22,10 +22,10 @@
     "js": ["/js/fb.js"]
   }],
   "options_page": "/options/options.html",
-  "page_action": {
-    "default_icon": { "19": "/img/icon19.png", "38": "/img/icon38.png" },
-    "default_title": "HH Options"
-  },
+  // "page_action": {
+  //   "default_icon": { "19": "/img/icon19.png", "38": "/img/icon38.png" },
+  //   "default_title": "HH Options"
+  // },
   "icons": { "16": "/img/icon16.png", "48": "/img/icon48.png", "128": "/img/icon128.png" },
   "web_accessible_resources": ["manifest.json"],
   "permissions": ["storage", "tabs", "*://*.facebook.com/*"]
